@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
       salt.install_master = true
       salt.install_type = "stable"
       salt.colorize = true
-      salt.bootstrap_options = "-P"
+      salt.bootstrap_options = "-P -D"
       salt.verbose = true
     end
   end
@@ -31,7 +31,7 @@ Vagrant.configure(2) do |config|
     minion1.vm.provision :salt do |salt|
       salt.install_type = "stable"
       salt.colorize = true
-      salt.bootstrap_options = "-P"
+      salt.bootstrap_options = "-P -D"
       salt.verbose = true
     end
   end
@@ -46,7 +46,7 @@ Vagrant.configure(2) do |config|
     minion2.vm.provision :salt do |salt|
       salt.install_type = "stable"
       salt.colorize = true
-      salt.bootstrap_options = "-P"
+      salt.bootstrap_options = "-P -D"
       salt.verbose = true
     end
   end
