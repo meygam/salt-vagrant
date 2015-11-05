@@ -10,7 +10,7 @@ Vagrant.configure(2) do |config|
     master.vm.synced_folder "etc/salt/master.d", "/etc/salt/master.d"
     master.vm.synced_folder "etc/salt/minion.d", "/etc/salt/minion.d"
     master.vm.synced_folder "etc/pki/tls/certs", "/etc/pki/tls/certs"
-    master.vm.synced_folder "srv/salt", "/srv/salt"
+    master.vm.synced_folder "srv", "/srv"
 
     master.vm.provision :salt do |salt|
       salt.install_master = true
