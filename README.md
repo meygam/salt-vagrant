@@ -11,6 +11,7 @@ To test the salt-api pagerduty integration
 * create a dummy incident with the below descriptions
   ```
   server minion1.meygam.com is reporting High Volume Usage
+  
   server minion2.meygam.com is reporting High Volume Usage
   ```
 * the incident would trigger the reactor `cleanup_logs`, which in turn starts the orchestartion `orch.meygam.util.cleanup_logs`, to delete the logs in the respective minion and resolve the pagerduty.
