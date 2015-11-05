@@ -8,7 +8,7 @@ To test the salt-api pagerduty integration
 * create dummy log files in minions using the helper script `/vagrant/helper_scripts/create_logs.sh`
 * share the vagrant box to make it available to the world `vagrant share master`, and get the url.
 * hook up the salt-master url `http://<<salt-master>>/hook/meygam/pagerduty/salt-api-test/incident` to pagerduty service
-* create a dummy incident with the below descriptions
+* create a dummy incident with one of the below descriptions
   ```
   server minion1.meygam.com is reporting High Volume Usage
   
