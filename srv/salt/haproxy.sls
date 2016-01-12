@@ -1,8 +1,17 @@
 haproxy:
-  pkg.installed
+  pkg.installed: []
+  service.running:
+    - watch:
+      - file: /etc/haproxy/haproxy.cfg
+    - require:
+      - pkg: haproxy
 
-haproxy_config:
+/etc/haproxy/haproxy.cfg:
   file.managed:
-    - name: /etc/haproxy/config
-    - source: salt://haproxy_config
+    - source: salt://haproxy/config
+    - template: jinja
+
+/etc/default/haproxy:
+  file.managed:
+    - source: salt://haproxy/default
     - template: jinja
