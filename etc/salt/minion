@@ -1,0 +1,6 @@
+master: 192.168.33.10
+
+mine_functions:
+  network.ip_addrs: [eth1]
+
+mine_interval: 1
